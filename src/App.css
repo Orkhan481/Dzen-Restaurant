@@ -1,38 +1,979 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --orange: #E49031;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  /* user-select: none; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background-color: var(--black);
+}
+
+/* HEADER */
+.home {
+  width: 100%;
+  height: 100vh;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659029995/Dzen/image_13_ot9g8r.png) no-repeat center center;
+  background-size: cover;
+  opacity: .1s;
+}
+
+#logo {
+  font-size: 44px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+header {
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: transparent;
+
+}
+
+nav {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  font-size: 26px;
+  color: var(--white);
+}
+
+.bar {
+  font-size: 40px;
+  color: var(--white);
+  display: none;
+}
+
+@media(max-width:768px) {
+  nav {
+    display: none;
+  }
+
+  .bar {
+    display: flex;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* BANNNER */
+.banner {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.banner-area {
+  width: 703px;
+  height: 271px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659203720/Dzen/curtain_um60yz.png) no-repeat center center;
+  border: 4px solid var(--white);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  transition: .6s ease-in-out;
+}
+
+.banner-area:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.banner-area h1 {
+  font-size: 66px;
+}
+
+.banner-area button {
+  padding: 15px 50px;
+  position: absolute;
+  bottom: -40px;
+  left: 35%;
+}
+
+@media(max-width:900px) {
+  .banner-area button {
+    left: 30%;
+  }
+}
+
+/* Our Story */
+.ourstory {
+  width: 90%;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  padding: 35px 20px;
+  margin: 0 auto;
+}
+
+.ourstory .images-area {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.ourstory .images-area .left-side {
+  margin-right: 10px;
+}
+
+.ourstory .images-area .left-side img:nth-child(1) {
+  margin-bottom: 10px;
+
+}
+
+.ourstory .images-area img {
+  transition: .6s ease-in-out;
+}
+
+.ourstory .images-area img:hover {
+  transform: scale(0.95);
+  transform: rotate(2deg);
+}
+
+.ourstory .content {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  padding: 15px 16px;
+}
+
+.ourstory .content h1 {
+  margin: 20px 0;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#right {
+  margin: 0 10px;
+  color: var(--orange)
+}
+
+@media(max-width:768px) {
+  .ourstory {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:900px) {
+  .ourstory .images-area {
+    flex-direction: column;
+  }
+}
+
+/* OUR MENU */
+.ourmenu {
+  width: 100%;
+  padding: 40px 20px;
+  /* height: 600px; */
+  /* background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659041300/Dzen/our-menu-bg_k63rfh.png) no-repeat center center;
+  background-size: cover; */
+  /* opacity: .6;
+  backdrop-filter: blur(40px); */
+  color: var(--white);
+
+}
+
+.ourmenu .cards {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.ourmenu .cards h2 {
+  font-size: 54px;
+  line-height: 1.2;
+}
+
+.ourmenu .card {
+  width: 250px;
+  height: 420px;
+  border: 5px solid var(--white);
+  background-color: var(--black);
+  text-align: center;
+  margin: 15px;
+  transition: .6s all ease-in-out;
+
+}
+
+.ourmenu .card:hover {
+  transform: scale(1.05);
+  border-color: var(--orange);
+}
+
+.ourmenu .card:nth-child(3) {
+  background-color: var(--orange);
+}
+
+.ourmenu .card h3 {
+  margin: 10px 0;
+}
+
+@media(max-width:900px) {
+  .ourmenu .cards {
+    flex-direction: column;
+  }
+}
+
+/* PLACE */
+.place {
+  width: 100%;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  padding: 30px 16px;
+}
+
+.place-content {
+  height: 100%;
+  flex-basis: 40%;
+  padding: 20px 0;
+}
+
+.place-content h1 {
+  margin: 20px 0;
+}
+
+.place-content p {
+  margin: 20px 0;
+}
+
+.place .images-area {
+  flex-basis: 40%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-around;
+  /* position: relative; */
+}
+
+.images-area .panel-area-1 {
+  width: 160px;
+  height: 600px;
+  display: flex;
+  align-items: flex-start;
+  /* position: absolute;
+ top:-30px;
+  left:0; */
+}
+
+.images-area .panel-area-2 {
+  width: 160px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  /* position: absolute;
+top:-10px;
+  left:180px; */
+}
+
+.images-area .panel-area-3 {
+  width: 160px;
+  height: 600px;
+  display: flex;
+  align-items: flex-end;
+  /* position: absolute;
+  top:10px;
+  left:360px; */
+}
+
+.images-area img {
+  transition: .6s ease-in-out;
+}
+
+.images-area img:hover {
+  transform: scale(0.95);
+  transform: rotate(2deg);
+}
+
+@media(max-width:900px) {
+  .place {
+    flex-direction: column;
+  }
+
+  /* .images-area .panel-2{
+    left:160px;
+  }
+  .images-area .panel-3{
+    left:320px;
+  } */
+}
+
+/* OUR PHOTO */
+.our-photo {
+  width: 100%;
+  background-color: var(--black);
+  padding: 40px 5px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin:300px 0; */
+}
+
+.our-photo .titles {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.our-photo .cards {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  margin: 0 auto;
+}
+
+.our-photo .half-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-photo .half-card .half-img {
+  margin: 12px 0;
+}
+
+.our-photo .card img:hover {
+  transition: all .6s ease-in-out;
+  transform: scale(0.95);
+  transform: rotate(3deg);
+}
+
+@media(max-width:900px) {
+  .our-photo .cards {
+    flex-direction: column;
+  }
+
+  .our-photo .titles {
+    flex-direction: column;
+  }
+}
+
+/* Reservation Banner */
+.reservation {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.reservation-banner {
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  color: var(--white);
+  border: 4px solid var(--white);
+  text-align: center;
+  position: relative;
+  transition: .6s ease-in-out;
+}
+
+.reservation-banner:hover {
+  color: var(--orange);
+  border-color: var(--orange)
+}
+
+.reservation-banner .personal-information {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+
+}
+
+.reservation-banner .personal-information .input-area {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.reservation-banner .personal-information .input-area input {
+  width: 225px;
+  height: 35px;
+  border: 3px solid var(--orange);
+  outline: none;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+
+.reservation-banner .reservation-date {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+
+}
+
+.reservation-banner .reservation-date .input-area {
+  margin: 10px;
+  font-size: 24px;
+}
+
+.reservation-banner .reservation-date .input-area input {
+  width: 225px;
+  height: 35px;
+  border: 3px solid var(--orange);
+  outline: none;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+#number-input {
+  width: 70px;
+  height: 35px;
+  text-align: center;
+}
+
+.information button {
+  position: absolute;
+  bottom: -40px;
+  left: 40%;
+}
+
+@media(max-width:900px) {
+  .reservation-banner .personal-information {
+    flex-direction: column;
+
+  }
+
+  .reservation-banner .reservation-date {
+    flex-direction: column;
+
+  }
+
+  .information button {
+    left: 20%;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  width: 70%;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer nav {
+  width: 80%;
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer nav a {
+  margin: 10px 0;
+}
+
+.author {
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 700;
+}
+
+/* MENYU START*/
+.menu {
+  width: 100%;
+  height: 640px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659199663/Dzen/menu-bg_stx3s2.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-banner {
+  width: 703px;
+  height: 271px;
+  color: var(--white);
+  border: 5px solid var(--white);
+  text-align: center;
+  padding: 10px 30px;
+  transition: .6s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-banner h1 {
+  font-size: 66px;
+  margin: 15px 0 30px 0;
+}
+
+.menu-banner:hover {
+  color: var(--orange);
+  border: 5px solid var(--orange);
+}
+
+/* menu types */
+.menu-type {
+  width: 90%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 auto;
+}
+
+.menu-type hr {
+  margin: 10px 0;
+  color: var(--white);
+}
+
+.menu-and-img {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+}
+
+.menu-type img:hover {
+  transition: .7s ease-in-out;
+  transform: scale(0.95);
+  transform: rotate(3deg);
+}
+
+.menu-card {
+  width: 501px;
+  color: var(--white);
+  border: 5px solid var(--white);
+  padding: 10px 0;
+  transition: .8s ease-in-out;
+}
+
+.menu-card:hover {
+  color: var(--orange);
+  border: 5px solid var(--orange);
+}
+
+.menu-card h2 {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.menu-item .title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.card-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(max-width:900px) {
+  .menu-and-img {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-type {
+    padding: 30px 0;
   }
+
+  .hidden {
+    display: none;
+  }
+}
+
+/* Dessert */
+.dessert {
+  width: 100%;
+  min-height: 480px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659203276/Dzen/dessert-bg_ssqcfr.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dessert-banner {
+  width: 703px;
+  height: 271px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659203720/Dzen/curtain_um60yz.png) no-repeat center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  border: 5px solid var(--white);
+  transition: .6s ease-in-out;
+}
+
+.dessert-banner h1 {
+  font-size: 66px;
+}
+
+.dessert-banner:hover {
+  color: var(--orange);
+  border: 5px solid var(--orange);
+}
+
+/* Dessert-cards */
+.dessert-cards {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+
+.dessert-card {
+  height: 359px;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+  padding-bottom: 10px;
+  color: var(--white);
+  border: 4px solid var(--white);
+  transition: .6s ease-in-out;
+}
+
+.dessert-card:hover {
+  color: var(--orange);
+  border: 4px solid var(--orange);
+  transform: scale(0.95);
+}
+
+@media(max-width:1200px) {
+  .dessert-card {
+    width: 48%;
+  }
+}
+
+@media(max-width:768px) {
+  .dessert-card {
+    width: 80%;
+  }
+}
+
+/* MENYU FINISH */
+/* BOOKING START */
+.booking-page {
+  display: flex;
+  flex-direction: column;
+  color: var(--white)
+}
+
+.booking {
+  width: 100%;
+  height: 640px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659123892/Dzen/reserved_ajqa6t.png) no-repeat center center;
+  background-size: cover;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-banner {
+  width: 703px;
+  height: 271px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659203720/Dzen/curtain_um60yz.png) no-repeat center center;
+  border: 4px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: 800;
+  transition: .6s ease-in-out;
+}
+
+.booking-banner:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.booking-cards {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+.booking-cards .card {
+  width: 340px;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 20px;
+  border: 5px solid var(--white);
+  transition: .6s ease-in-out;
+}
+
+.booking-cards .card:hover {
+  transform: scale(1.05);
+  border-color: var(--orange);
+}
+
+#booking-img {
+  width: 332px;
+  height: 409px;
+}
+
+.booking-cards .card-content {
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.booking-cards .card h2 {
+  font-size: 36px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.booking-cards .card p {
+  font-size: 20px;
+}
+
+/* @media(max-width:900px){
+  .booking-cards{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+} */
+
+
+/* BOOKING FINISH */
+/* ABOUT US START */
+.about {
+  width: 100%;
+  height: 640px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659213048/Dzen/about-bg_gzmb7a.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-banner{
+  width: 703px;
+  height: 271px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659203720/Dzen/curtain_um60yz.png) no-repeat center center;
+  border:5px solid var(--white);
+  color:var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .6s ease-in-out;
+}
+.about-banner:hover{
+  border:5px solid var(--orange);
+  color:var(--orange);
+}
+.about-content{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding:30px 20px;
+  margin:0 auto;
+  
+  color:var(--white);
+}
+.about-content .left-side{
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:30px 20px;
+  margin:15px 0;
+}
+.about-content .left-side h1{
+  margin:15px 0;
+}
+.about-content .right-side {
+  flex-basis: 35%;
+}
+.about-content .right-side img{
+transition: .6s ease-in-out;
+}
+.about-content .right-side img:hover{
+  transform:scale(.95)
+}
+@media(max-width:900px){
+  .about-content{
+flex-direction: column;
+  }
+  .about-content{
+    width: 90%;
+    align-items: center;
+  }
+  .about-content .left-side{
+    flex-basis: 100%;
+  }
+  .about-content .right-side{
+    flex-basis: 100%;
+  }
+}
+/* our team section */
+.our-team{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center ;
+  color:var(--white);
+  margin:0 auto;
+}
+.our-team .titles{
+   text-align: center;
+   margin:15px 0;
+}
+.our-team .titles h1{
+  margin:10px 0;
+}
+.our-team-cards{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:20px 0;
+  margin:20px 0;
+}
+.our-team-cards .card{
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom:10px;
+  margin:0 5px;
+  transition: .6s ease-in-out;
+}
+.our-team-cards .card:hover{
+  transform: translate(10px,5px);
+}
+/* ABOUT US FINISH */
+/* CONTACT START */
+.contact {
+  width: 100%;
+  height: 800px;
+  background: url(https://res.cloudinary.com/dreqpija0/image/upload/v1659212121/Dzen/map_q6vmlc.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.contact-banner {
+  width: 536px;
+  height: 600px;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 45px 40px;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+
+/* CONTACT FINISH */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For BUTTONS */
+.btn {
+  padding: 8px 20px;
+  margin: 10px 0;
+}
+
+.yellow-btn {
+  background-color: var(--orange);
+  transition: .6s ease-in-out;
+}
+
+.yellow-btn:hover {
+  border: 2px solid var(--orange);
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+
+/* TEXT SIZE */
+.xlg-text {
+  font-size: 44px;
+}
+
+.lg-text {
+  font-size: 36px;
+}
+
+.md-text {
+  font-size: 26px;
+}
+
+.sm-text {
+  font-size: 20px;
+}
+
+/* TEXT COLOR */
+.orange-text {
+  color: var(--orange);
 }
