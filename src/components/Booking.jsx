@@ -5,14 +5,18 @@ const Booking = () => {
   return (
     <div className='booking-page'>
     <section className='booking'>
-     <div className="booking-banner xlg-text">
+     <div className="booking-banner xlg-text" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
      Бронирование
      </div>
     </section>
 
     <section className='booking-cards'>
 
-        <div className="card">
+        <div className="card" data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
 
             <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659124411/Dzen/bk-card-1_zouo9k.png" alt="" id="booking-img"/>
             
@@ -24,7 +28,9 @@ const Booking = () => {
 
         </div>
 
-        <div className="card">
+        <div className="card" data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
 
         <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659124415/Dzen/bk-card-2_pcuczs.png" alt="" id="booking-img"/>
 
@@ -36,7 +42,9 @@ const Booking = () => {
 
         </div>
 
-        <div className="card">
+        <div className="card" data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
 
         <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659124417/Dzen/bk-card-3_hgnjtl.png" alt="" id="booking-img"/>
 

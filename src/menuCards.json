@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659204353/Dzen/dessert-card-1_yvrym6.png",
+        "title": "Мороженое Oreo",
+        "price":"369.90"
+    },
+   
+    {
+        "id": "2",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659204923/Dzen/dessert-card-2_i5f9xx.png",
+        "title": "Ванильное мороженое",
+        "price":"369.90"
+    }, 
+    
+    {
+        "id": "3",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659204921/Dzen/dessert-card-3_omvok7.png",
+        "title": "Шоколадный капкейк",
+        "price":"369.90"
+    },
+
+    {
+        "id": "4",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659204923/Dzen/dessert-card-4_ta14dx.png",
+        "title": "Сэндвич с клубникой",
+        "price":"369.90"
+    },
+
+    {
+        "id": "5",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659205194/dessert-card-5_wau4gu.png",
+        "title": "Сэндвич с бананом",
+        "price":"369.90"
+    },
+
+    {
+        "id": "6",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659205199/dessert-card-6_nf9ayn.png",
+        "title": "Шоколадный пирог",
+        "price":"369.90"
+    },
+
+    {
+        "id": "7",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659205198/dessert-card-7_ina6qj.png",
+        "title": "Вишнёвый торт",
+        "price":"369.90"
+    },
+
+    {
+        "id": "8",
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659205198/dessert-card-8_zftayo.png",
+        "title": "Клубничное мороженое",
+        "price":"369.90"
+    }
+]

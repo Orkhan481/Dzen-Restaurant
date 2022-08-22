@@ -1,6 +1,5 @@
-
+import React from 'react';
 import './App.css';
-import ReactDOM from "react-dom/client";
 import {
   BrowserRouter,
   Routes,
@@ -11,12 +10,21 @@ import { Suspense } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import Booking from './components/Booking';
-import Menu from './components/Menu';
-import Contact from './components/Contact';
-import About from './components/About';
+
+// React Lazy
+
+const Booking = React.lazy(()=>import("./components/Booking"))
+const Menu = React.lazy(()=>import("./components/Menu"))
+const Contact = React.lazy(()=>import("./components/Contact"))
+const About = React.lazy(()=>import("./components/About"))
 
 function App() {
+  const loader = document.querySelector(".loader");
+  window.addEventListener("load",function(){
+    setTimeout(function(){
+        loader.style.display = 'none';
+    },2000)
+})
   return (
     <div className="App">
 

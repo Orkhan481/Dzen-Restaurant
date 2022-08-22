@@ -11,7 +11,7 @@ const Footer = () => {
                 <a href="#"><Link to="/" className='link' id='logo'>Дзен</Link></a>
 
                 <nav>
-                    <a href="#"><Link to="/" className='link'>Главная</Link></a>
+                    <a href="#"><Link to="/" className='link' >Главная</Link></a>
                     <a href="#"><Link to="/menu" className='link'>Меню</Link></a>
                     <a href="#"><Link to="/booking" className='link'>Бронирование</Link></a>
                     <a href="#"><Link to="/about" className='link'>О нас</Link></a>

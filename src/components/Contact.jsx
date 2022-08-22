@@ -5,7 +5,7 @@ const Contact = () => {
     <>
       <section className='contact'>
 
-        <div className="contact-banner">
+        <div className="contact-banner" data-aos="flip-up" data-aos-duration="3000">
           <div className="banner-item">
             <h1 className='xlg-text'>Рабочее время</h1>
             <p className='md-text'>Ежедневно : 10.00 - 23.30</p>

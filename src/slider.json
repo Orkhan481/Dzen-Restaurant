@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "image":"https://res.cloudinary.com/dreqpija0/image/upload/v1659029995/Dzen/image_13_ot9g8r.png"
+    },
+
+    {
+        "id":2,
+        "image":"https://res.cloudinary.com/dreqpija0/image/upload/v1659099945/Dzen/our-photo-card-4.2_xwpkyp.png"
+    },
+
+    {
+        "id":3,
+        "image":"https://res.cloudinary.com/dreqpija0/image/upload/v1659041300/Dzen/our-menu-bg_k63rfh.png"
+    },
+
+    {
+        "id":4,
+        "image":"https://res.cloudinary.com/dreqpija0/image/upload/v1659099946/Dzen/our-photo-card-1.1_obgtwc.png"
+    },
+
+    {
+        "id":5,
+        "image":"https://res.cloudinary.com/dreqpija0/image/upload/v1659203276/Dzen/dessert-bg_ssqcfr.png"
+    }
+
+]

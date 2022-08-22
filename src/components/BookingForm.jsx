@@ -32,7 +32,9 @@ const BookingForm = () => {
 
     return (
         <>
-            <section className="reservation">
+            <section className="reservation" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
 
                 <div className="reservation-banner">
                     <h1 className='md-text'>Бронирование</h1>
@@ -72,7 +74,7 @@ const BookingForm = () => {
                             </div>
                             <button className='btn yellow-btn sm-text' id="reserve-btn">Заказать столик</button>
                         </div>
-                        </form>
+                    </form>
 
                 </div>
             </section>

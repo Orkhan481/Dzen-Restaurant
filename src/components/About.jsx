@@ -1,11 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-const About = () => (
-  <>
+import ourTeam from '../ourTeam.json';
+import slider from '../slider.json'
+
+import 'swiper/css';
+import "swiper/css/bundle";
+import "swiper/css/grid";
+import { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const About = () => {
+  return (
+    <>
 
     <section className="about">
 
-      <div className="about-banner">
+      <div className="about-banner" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <h1 className='xlg-text'>Коллектив и история</h1>
       </div>
 
@@ -13,7 +27,8 @@ const About = () => (
 
     <section className='about-content'>
 
-      <div className="left-side">
+      <div className="left-side" data-aos="fade-right"  data-aos-easing="linear"
+     data-aos-duration="1000">
 
         <h1 className='lg-text'>История <br /> ресторана</h1>
         <p className='sm-text'>Добро пожаловать в ресторан 48 Cuisine. Этот ресторан был основан в 2012 году с концепцией изысканной азиатской кухни, приготовленной профессиональным шеф-поваром.</p>
@@ -22,11 +37,58 @@ const About = () => (
 
       </div>
 
-      <div className="right-side">
+      <div className="right-side" data-aos="fade-left"  data-aos-easing="linear"
+     data-aos-duration="1000">
         <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659039534/Dzen/3_uroy9e.png" alt="About Image" />
       </div>
 
     </section>
+
+{/* GALLERY */}
+<div className="galery-titles">
+<h1 className='xlg-text'>Галерея</h1>
+</div>
+
+    {/* SWIPPERJS */}
+    <Swiper
+          breakpoints={{
+            500: {
+              width: 500,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            900: {
+              width: 900,
+              slidesPerView: 3,
+            },
+          }}
+          modules={[Navigation, Pagination]}
+          spaceBetween={0}
+          slidesPerView={3}
+          navigation
+          //pagination={{ clickable: true }}
+          //scrollbar={{ draggable: true }}
+          //onSwiper={(swiper) => console.log(swiper)}
+          //onSlideChange={() => console.log("slide change")}
+          // install Swiper modules
+        >
+            {slider.map((slide)=>
+            <SwiperSlide className="bg-color1">
+            <div className="container-lg">
+              <div className="row">
+                <div className='col-md-6 d-flex justify-content-center align-items-center card-item'>
+                {/* Image 1 */}
+                <img className='img-fluid' src={slide.image} />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+            )}
+          
+        </Swiper>
     {/* OUT TEAM */}
     <section className='our-team' >
 
@@ -36,36 +98,19 @@ const About = () => (
 </div>
 
 <div className="our-team-cards">
-{/* Our Team  1*/}
-   <div className="card">
-      <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659214561/Dzen/team-1_wz8wej.png" alt="Our Team Image" />
-      <h2 >Алексей Кузнецов</h2>
-      <p>Менеджер</p>
-   </div>
-{/* Our Team  2*/}
-   <div className="card">
-      <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659214559/Dzen/team-2_yijivt.png" alt="Our Team Image" />
-      <h2>Минори Сато</h2>
-      <p>Шеф-повар</p>
-   </div>
-{/* Our Team  3*/}
-   <div className="card">
-      <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659214561/Dzen/team-3_y1fail.png" alt="Our Team Image" />
-      <h2>Денис Петров</h2>
-      <p>Шеф-повар</p>
-   </div>
-{/* Our Team  4*/}
-   <div className="card">
-      <img src="https://res.cloudinary.com/dreqpija0/image/upload/v1659214560/Dzen/team-4_blnntl.png" alt="Our Team Image" />
-      <h2>Хидео Ватанабэ</h2>
-      <p>Су-шеф</p>
-   </div>
 
+ {ourTeam.map((team)=>
+  <div className="card">
+      <img src={team.image} alt="Our Team Image" />
+      <h2 >{team.name}</h2>
+      <p>{team.position}</p>
+   </div>
+)} 
 </div>
-
     </section>
 
   </>
-)
 
+   )
+}
 export default About

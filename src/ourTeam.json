@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659214561/Dzen/team-1_wz8wej.png",
+        "name": "Алексей Кузнецов",
+        "position": "Менеджер"
+    },
+    {
+        "id": 2,
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659214559/Dzen/team-2_yijivt.png",
+        "name": "Минори Сато",
+        "position": "Шеф-повар"
+    },
+    {
+        "id": 3,
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659214561/Dzen/team-3_y1fail.png",
+        "name": "Денис Петров",
+        "position": "Шеф-повар"
+    },
+    {
+        "id": 4,
+        "image": "https://res.cloudinary.com/dreqpija0/image/upload/v1659214560/Dzen/team-4_blnntl.png",
+        "name": "Хидео Ватанабэ",
+        "position": "Су-шеф"
+    }
+]
